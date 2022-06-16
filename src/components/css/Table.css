@@ -1,0 +1,24 @@
+.load {
+  color: white;
+}
+
+table {
+  box-shadow: 0 0 20px greenyellow;
+  box-sizing: border-box;
+}
+
+th {
+  background-color: green;
+  color: white;
+  padding: 10px 5px;
+}
+
+td {
+  background-color: white;
+  text-align: center;
+  padding: 5px;
+}
+
+td p {
+  margin: 5px 0;
+}

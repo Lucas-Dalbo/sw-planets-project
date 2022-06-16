@@ -1,0 +1,133 @@
+.filter-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.filters {
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: 'arial';
+  font-weight: 600;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.filters button {
+  background-color: white;
+  border: royalblue 2px solid;
+  border-radius: 10px;
+  color: royalblue;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.filters button:hover {
+  background-color: black;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.name-filter {
+  box-sizing: border-box;
+}
+
+.comp-filter , .sort-filter {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.comp-filter:nth-last-of-type(2) input {
+  width: 100px;
+}
+
+.comp-filter label, .sort-filter label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px 0;
+  margin: 0 5px;
+}
+
+.comp-filter button, .sort-filter button {
+  margin: 10px 5px;
+}
+
+.order-select {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px;
+  padding: 10px 0;
+}
+
+.order-select label {
+  display: initial;
+  padding: 0;
+}
+
+input, select, button {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.used-filters {
+  background-color: whitesmoke;
+  border-bottom: solid red 2px;
+  border-top: solid red 2px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  width: 100%;
+}
+
+.u-filter {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px red;
+  color: white;
+  display: flex;
+  font-weight: 600;
+  margin: 0 5px;
+  padding: 10px;
+}
+
+.u-filter p {
+  flex-grow: 1;
+  margin: 0;
+}
+
+.u-filter button {
+  background-color: black;
+  border: red 2px solid;
+  border-radius: 100%;
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 5px;
+  padding: 2px 5px;
+  transition: 0.3s;
+}
+
+.u-filter button:hover, .clear-filter:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+.clear-filter:hover {
+  border-radius: 15px;
+}
+
+.clear-filter {
+  background-color: black;
+  border: red 2px solid;
+  color: red;
+  font-weight: 600;
+  height: 100%;
+  transition: 0.3s;
+}

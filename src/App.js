@@ -9,7 +9,9 @@ function App() {
     <PlanetsProvider>
       <h1>Star Wars Planets</h1>
       <Filters />
-      <Table />
+      <div className="table-wrapper">
+        <Table />
+      </div>
     </PlanetsProvider>
   );
 }

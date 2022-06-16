@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import PlanetsContext from '../context/PlanetsContext';
+import './css/Table.css';
 
 const findMovieName = (film) => {
   const episode = film.split('/')[5];
-  console.log(episode);
   if (episode === '1') return 'The Phantom Menace'
   if (episode === '2') return 'Attack of the Clones'
   if (episode === '3') return 'Revenge of the Sith'
@@ -80,7 +80,7 @@ function Table() {
 
   return (
     <div>
-      {load ? <p>Loading...</p> : buildTable()}
+      {load ? <h3 className="load">Loading...</h3> : buildTable()}
     </div>
   );
 }

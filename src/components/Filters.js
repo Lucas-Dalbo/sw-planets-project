@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import PlanetsContext from '../context/PlanetsContext';
+import './css/Filters.css';
 
 const options = [
   'population', 'rotation_period',
@@ -81,8 +82,8 @@ function Filters() {
   }, [filterByNumericValues]);
 
   return (
-    <section>
-      <div>
+    <section className="filter-wrapper">
+      <div className="name-filter">
         <input
           id="name-filter"
           type="text"
@@ -91,110 +92,112 @@ function Filters() {
           data-testid="name-filter"
         />
       </div>
-      <div>
-        <label htmlFor="column">
-          Column
-          <select
-            id="column"
-            name="column"
-            value={ numbFilter.column }
-            onChange={ handleChange }
-            data-testid="column-filter"
-          >
-            { freeFilters.length === 0
-              ? <option>Sem filtros disponiveis</option>
-              : freeFilters.map((filter) => (
-                <option key={ filter }>{filter}</option>
-              ))}
-          </select>
-        </label>
-        <label htmlFor="comparison">
-          Comparison
-          <select
-            id="comparison"
-            name="comparison"
-            value={ numbFilter.comparison }
-            onChange={ handleChange }
-            data-testid="comparison-filter"
-          >
-            <option>maior que</option>
-            <option>menor que</option>
-            <option>igual a</option>
-          </select>
-        </label>
-        <label htmlFor="value">
-          <input
-            id="value"
-            type="number"
-            name="value"
-            value={ numbFilter.value }
-            onChange={ handleChange }
-            data-testid="value-filter"
-          />
-        </label>
-        <button
-          type="button"
-          disabled={ freeFilters.length === 0 }
-          onClick={ onClickNumbFilter }
-          data-testid="button-filter"
-        >
-          FILTRAR
-        </button>
-      </div>
-      <div>
-        <label htmlFor="columnSort">
-          Column
-          <select
-            id="columnSort"
-            name="column"
-            onChange={ handleSortColumn }
-            data-testid="column-sort"
-          >
-            { options.map((option) => (
-              <option key={ option }>
-                {option}
-              </option>
-            ))}
-          </select>
-        </label>
-        <div>
-          <label htmlFor="sort-cres">
-            <input
-              type="radio"
-              id="sort-cres"
-              name="sort-type"
-              value="ASC"
-              onChange={ handleSortRadio }
-              defaultChecked
-              data-testid="column-sort-input-asc"
-            />
-            Crescente
+      <div className="filters" >
+        <div className="comp-filter">
+          <label htmlFor="column">
+            Column
+            <select
+              id="column"
+              name="column"
+              value={ numbFilter.column }
+              onChange={ handleChange }
+              data-testid="column-filter"
+            >
+              { freeFilters.length === 0
+                ? <option>Sem filtros disponiveis</option>
+                : freeFilters.map((filter) => (
+                  <option key={ filter }>{filter}</option>
+                ))}
+            </select>
           </label>
-          <label htmlFor="sort-decres">
-            <input
-              type="radio"
-              id="sort-decres"
-              name="sort-type"
-              value="DESC"
-              onChange={ handleSortRadio }
-              data-testid="column-sort-input-desc"
-            />
-            Decrescente
+          <label htmlFor="comparison">
+            Comparison
+            <select
+              id="comparison"
+              name="comparison"
+              value={ numbFilter.comparison }
+              onChange={ handleChange }
+              data-testid="comparison-filter"
+            >
+              <option>maior que</option>
+              <option>menor que</option>
+              <option>igual a</option>
+            </select>
           </label>
+          <label htmlFor="value">
+            <input
+              id="value"
+              type="number"
+              name="value"
+              value={ numbFilter.value }
+              onChange={ handleChange }
+              data-testid="value-filter"
+            />
+          </label>
+          <button
+            type="button"
+            disabled={ freeFilters.length === 0 }
+            onClick={ onClickNumbFilter }
+            data-testid="button-filter"
+          >
+            FILTRAR
+          </button>
         </div>
-        <button
-          type="button"
-          onClick={ onClickSort }
-          data-testid="column-sort-button"
-        >
-          ORDENAR
-        </button>
+        <div className="sort-filter">
+          <label htmlFor="columnSort">
+            Column
+            <select
+              id="columnSort"
+              name="column"
+              onChange={ handleSortColumn }
+              data-testid="column-sort"
+              >
+              { options.map((option) => (
+                <option key={ option }>
+                  {option}
+                </option>
+              ))}
+            </select>
+          </label>
+          <div className="order-select">
+            <label htmlFor="sort-cres">
+              <input
+                type="radio"
+                id="sort-cres"
+                name="sort-type"
+                value="ASC"
+                onChange={ handleSortRadio }
+                defaultChecked
+                data-testid="column-sort-input-asc"
+                />
+              Crescente
+            </label>
+            <label htmlFor="sort-decres">
+              <input
+                type="radio"
+                id="sort-decres"
+                name="sort-type"
+                value="DESC"
+                onChange={ handleSortRadio }
+                data-testid="column-sort-input-desc"
+                />
+              Decrescente
+            </label>
+          </div>
+          <button
+            type="button"
+            onClick={ onClickSort }
+            data-testid="column-sort-button"
+            >
+            ORDENAR
+          </button>
+        </div>
       </div>
       {
         filterByNumericValues.length > 0 && (
-          <div>
+          <div className="used-filters">
             { filterByNumericValues.map((filter) => (
-              <div key={ filter.column } data-testid="filter">
+              <div key={ filter.column } data-testid="filter" className="u-filter">
                 <p>
                   <span>{filter.column}</span>
                   {' '}
@@ -214,6 +217,7 @@ function Filters() {
             <div>
               <button
                 type="button"
+                className="clear-filter"
                 onClick={ () => onDeleteAllFiters() }
                 data-testid="button-remove-filters"
               >
