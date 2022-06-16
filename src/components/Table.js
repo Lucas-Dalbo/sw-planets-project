@@ -41,6 +41,13 @@ function Table() {
         <div>{error}</div>
       );
     }
+    
+    if (planets.length === 0) {
+      return (
+        <h2 className="load" >Planetas não encontrados</h2>
+      )
+    }
+
     return (
       <table>
         <thead>
