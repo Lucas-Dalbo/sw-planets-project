@@ -11,7 +11,7 @@ function PlanetsProvider({ children }) {
   const [order, setOrder] = useState({ column: '', sort: '' });
 
   const onNameFilter = (value) => {
-    setFilterName({ name: value });
+    setFilterName({ name: value.toLowerCase() });
   };
 
   const onNumericFilter = (data) => {
@@ -45,7 +45,7 @@ function PlanetsProvider({ children }) {
     let newPlanets = planets.sort();
     // Filtro de Nome
     if (filterByName.name.length > 0) {
-      newPlanets = newPlanets.filter(({ name }) => name.includes(filterByName.name));
+      newPlanets = newPlanets.filter(({ name }) => name.toLowerCase().includes(filterByName.name));
     }
     // Filtro Numérico
     if (filterByNumericValues.length > 0) {
