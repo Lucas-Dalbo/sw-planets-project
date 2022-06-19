@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/sw-plantes-project/static/css/main.a11b3847.css",
-    "main.js": "/sw-plantes-project/static/js/main.5dbcbb3f.js",
-    "index.html": "/sw-plantes-project/index.html",
-    "main.a11b3847.css.map": "/sw-plantes-project/static/css/main.a11b3847.css.map",
-    "main.5dbcbb3f.js.map": "/sw-plantes-project/static/js/main.5dbcbb3f.js.map"
+    "main.css": "/sw-planets-project/static/css/main.a11b3847.css",
+    "main.js": "/sw-planets-project/static/js/main.5dbcbb3f.js",
+    "index.html": "/sw-planets-project/index.html",
+    "main.a11b3847.css.map": "/sw-planets-project/static/css/main.a11b3847.css.map",
+    "main.5dbcbb3f.js.map": "/sw-planets-project/static/js/main.5dbcbb3f.js.map"
   },
   "entrypoints": [
     "static/css/main.a11b3847.css",
