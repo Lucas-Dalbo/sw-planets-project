@@ -1,7 +1,7 @@
 
 [Leia em Portugês!](./README.md)
 
-# Trivia Project
+# Star Wars Planets Project
 This project was developed while a student at Trybe.
 
 ---

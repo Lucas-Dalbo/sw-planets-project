@@ -1,7 +1,7 @@
 
 [Read it in English!](./README-Eng.md)
 
-# Projeto Trivia
+# Projeto Star Wars Planets
 Este projeto foi desenvolvido enquanto estudante da Trybe.
 
 ---
