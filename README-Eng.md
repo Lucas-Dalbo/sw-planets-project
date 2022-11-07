@@ -1,5 +1,5 @@
 
-[Leia em Portugês!](./README.md)
+[Leia em Português!](./README.md)
 
 # Star Wars Planets Project
 This project was developed while a student at Trybe.
